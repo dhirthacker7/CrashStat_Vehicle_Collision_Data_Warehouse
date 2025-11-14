@@ -22,15 +22,33 @@ CrashStat is a comprehensive data analytics project that examines motor vehicle 
 
 ---
 
-## **Objectives**
-The primary goal of CrashStat is to **analyze collision data systematically** and provide **data-driven recommendations** for enhancing road safety. Specific objectives include:
+Objectives
+The primary goal of CrashStat is to analyze collision data systematically from three major cities (New York, Chicago, and Austin) and provide data-driven recommendations for enhancing road safety. The project addresses critical analytical questions through a robust data warehousing solution:
 
-- **Identifying collision hotspots** across different urban areas
-- **Analyzing temporal patterns** to determine high-risk time periods
-- **Understanding contributing factors** leading to accidents
-- **Building scalable data pipelines** for continuous data ingestion and processing
-- **Creating interactive visualizations** for stakeholders and policymakers
-- **Optimizing query performance** through efficient data warehouse design
+Analytical Goals
+
+Accident Volume Analysis: Quantify total accidents across NYC, Austin, and Chicago
+Geographic Risk Assessment: Identify top 3 high-risk areas in each city and determine the top 5 most fatal accident locations
+Injury and Fatality Statistics: Analyze accidents resulting in injuries and fatalities at both aggregate and city-specific levels
+Pedestrian Safety Analysis: Assess pedestrian involvement rates and compare pedestrian fatalities against other road users
+Motorist Impact Assessment: Track injury and fatality rates among motorists across different cities
+Temporal Pattern Recognition: Examine when accidents occur most frequently, including:
+
+Time of day distribution
+Day of week patterns
+Weekday vs. weekend trends
+Seasonal variations
+
+
+Causative Factor Analysis: Identify the most common contributing factors leading to accidents
+
+Technical Objectives
+
+Data Integration: Standardize and merge collision data from three distinct city datasets with varying schemas
+Scalable ETL Pipelines: Build efficient data extraction, transformation, and loading workflows
+Dimensional Modeling: Design optimized star schema with facts and dimensions for analytical queries
+Data Quality Management: Implement Slowly Changing Dimensions (SCD Type 2) and handle null values appropriately
+Interactive Visualization: Create comprehensive dashboards in Power BI and Tableau for stakeholder decision-making
 
 ---
 
