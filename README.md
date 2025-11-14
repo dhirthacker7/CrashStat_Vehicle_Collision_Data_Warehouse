@@ -80,18 +80,3 @@ This project analyzes motor vehicle collision data to uncover trends and hotspot
 ![image](https://github.com/user-attachments/assets/9d8647a4-b847-4c1f-a2e1-13d53a9b909e)
 
 **Explanation**: Shows hourly and daily distributions of accidents, helping stakeholders understand when collisions are most likely to occur.
-
----
-
-## How to Use
-
-1. Clone the repository:
-    
-    ```bash
-    git clone <https://github.com/dhirthacker7/Motor_Vehicle_Collisions.git>
-    ```
-    
-2. Set up the environment and dependencies as outlined in the requirements.txt file.
-3. Follow the notebook or scripts provided for data ingestion, transformation, and visualization.
-
----
