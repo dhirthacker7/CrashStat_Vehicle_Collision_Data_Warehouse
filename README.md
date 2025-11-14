@@ -74,7 +74,6 @@ Raw Data → AWS S3 → ETL Processing (Talend/Alteryx) → Snowflake DW → Pow
 ```
 
 **Key Components:**
-- **Storage Layer**: AWS S3 for raw data storage
 - **Processing Layer**: Talend Studio and Alteryx for ETL operations
 - **Data Warehouse**: Snowflake (star schema design)
 - **Analytics Layer**: Power BI for visualization and reporting
