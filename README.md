@@ -35,15 +35,16 @@ The primary goal of CrashStat is to **analyze collision data systematically** an
 ---
 
 ## **Data Sources**
-This project utilizes publicly available collision data from municipal transportation departments and open data portals. The datasets contain detailed information about:
+The dataset is sourced from publicly available **Department of Transportation (DoT) data portals**:
 
-- NYC Data
-https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data
-- Weather and road conditions
-- Vehicle types and number of vehicles involved
-- Injury severity and casualties
-- Primary and secondary contributing factors
-- Pedestrian and cyclist involvement
+### **New York City**
+- [NYC Motor Vehicle Collisions - Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data)
+
+### **Chicago**
+- [Chicago Traffic Crashes - Crashes](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data)
+
+### **Austin**
+- [Austin Crash Report Data - Crash Level Records](https://data.austintexas.gov/Transportation-and-Mobility/Austin-Crash-Report-Data-Crash-Level-Records/y2wy-tgr5/about_data)
 
 ---
 
