@@ -1,6 +1,5 @@
 # **CrashStat: Motor Vehicle Collision Analysis**
 
-## **Overview**
 CrashStat analyzes motor vehicle collision data from New York, Chicago, and Austin to identify accident patterns, risk factors, and safety insights. The project implements a complete data warehouse solution with ETL pipelines and interactive dashboards to answer critical questions about traffic safety.
 
 ---
@@ -27,13 +26,13 @@ CrashStat analyzes motor vehicle collision data from New York, Chicago, and Aust
 ## **Data Sources**
 
 ### **New York City**
-[Motor Vehicle Collisions - Crashes | NYC Open Data](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data)
+[Motor Vehicle Collisions - Crashes | NYC Open Data]([https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data))
 
 ### **Chicago**
-[Traffic Crashes - Crashes | City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data)
+[Traffic Crashes - Crashes | City of Chicago Data Portal]([https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data))
 
 ### **Austin**
-[Austin Crash Report Data - Crash Level Records | City of Austin](https://data.austintexas.gov/Transportation-and-Mobility/Austin-Crash-Report-Data-Crash-Level-Records/y2wy-tgr5/about_data)
+[Austin Crash Report Data - Crash Level Records | City of Austin]([https://data.austintexas.gov/Transportation-and-Mobility/Austin-Crash-Report-Data-Crash-Level-Records/y2wy-tgr5/about_data](https://data.austintexas.gov/Transportation-and-Mobility/Austin-Crash-Report-Data-Crash-Level-Records/y2wy-tgr5/about_data))
 
 ---
 
