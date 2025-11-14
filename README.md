@@ -1,244 +1,128 @@
 # **CrashStat: Motor Vehicle Collision Analysis**
 
 ## **Overview**
-CrashStat is a comprehensive data analytics project that examines motor vehicle collision patterns to identify risk factors and accident hotspots. By leveraging modern data engineering practices and cloud-based technologies, this project transforms raw collision data into actionable intelligence for traffic safety improvement and urban planning decisions.
+CrashStat analyzes motor vehicle collision data from New York, Chicago, and Austin to identify accident patterns, risk factors, and safety insights. The project implements a complete data warehouse solution with ETL pipelines and interactive dashboards to answer critical questions about traffic safety.
 
 ---
 
-## **Table of Contents**
-- [Overview](#overview)
-- [Objectives](#objectives)
-- [Data Sources](#data-sources)
-- [Architecture](#architecture)
-- [Implementation Workflow](#implementation-workflow)
-  - [Phase 1: Data Acquisition and Profiling](#phase-1-data-acquisition-and-profiling)
-  - [Phase 2: ETL Pipeline Development](#phase-2-etl-pipeline-development)
-  - [Phase 3: Data Warehousing](#phase-3-data-warehousing)
-  - [Phase 4: Analytics and Visualization](#phase-4-analytics-and-visualization)
-- [Key Insights](#key-insights)
-- [Dashboards](#dashboards)
-- [Technologies Used](#technologies-used)
-- [Future Enhancements](#future-enhancements)
+## **Objectives**
 
----
+### **Analytical Goals**
+- Quantify accident volumes across three cities
+- Identify top high-risk areas and most fatal locations
+- Analyze injury and fatality statistics by city
+- Assess pedestrian involvement and safety
+- Examine temporal patterns (time of day, day of week, seasonality)
+- Identify common contributing factors
 
-Objectives
-The primary goal of CrashStat is to analyze collision data systematically from three major cities (New York, Chicago, and Austin) and provide data-driven recommendations for enhancing road safety. The project addresses critical analytical questions through a robust data warehousing solution:
-
-Analytical Goals
-
-Accident Volume Analysis: Quantify total accidents across NYC, Austin, and Chicago
-Geographic Risk Assessment: Identify top 3 high-risk areas in each city and determine the top 5 most fatal accident locations
-Injury and Fatality Statistics: Analyze accidents resulting in injuries and fatalities at both aggregate and city-specific levels
-Pedestrian Safety Analysis: Assess pedestrian involvement rates and compare pedestrian fatalities against other road users
-Motorist Impact Assessment: Track injury and fatality rates among motorists across different cities
-Temporal Pattern Recognition: Examine when accidents occur most frequently, including:
-
-Time of day distribution
-Day of week patterns
-Weekday vs. weekend trends
-Seasonal variations
-
-
-Causative Factor Analysis: Identify the most common contributing factors leading to accidents
-
-Technical Objectives
-
-Data Integration: Standardize and merge collision data from three distinct city datasets with varying schemas
-Scalable ETL Pipelines: Build efficient data extraction, transformation, and loading workflows
-Dimensional Modeling: Design optimized star schema with facts and dimensions for analytical queries
-Data Quality Management: Implement Slowly Changing Dimensions (SCD Type 2) and handle null values appropriately
-Interactive Visualization: Create comprehensive dashboards in Power BI and Tableau for stakeholder decision-making
+### **Technical Goals**
+- Integrate and standardize data from three city datasets
+- Build scalable ETL pipelines using Talend
+- Design star schema dimensional model
+- Implement SCD Type 2 for historical tracking
+- Create interactive dashboards in Power BI and Tableau
 
 ---
 
 ## **Data Sources**
-The dataset is sourced from publicly available **Department of Transportation (DoT) data portals**:
 
 ### **New York City**
-- [NYC Motor Vehicle Collisions - Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data)
+[Motor Vehicle Collisions - Crashes | NYC Open Data](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data)
 
 ### **Chicago**
-- [Chicago Traffic Crashes - Crashes](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data)
+[Traffic Crashes - Crashes | City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data)
 
 ### **Austin**
-- [Austin Crash Report Data - Crash Level Records](https://data.austintexas.gov/Transportation-and-Mobility/Austin-Crash-Report-Data-Crash-Level-Records/y2wy-tgr5/about_data)
+[Austin Crash Report Data - Crash Level Records | City of Austin](https://data.austintexas.gov/Transportation-and-Mobility/Austin-Crash-Report-Data-Crash-Level-Records/y2wy-tgr5/about_data)
 
 ---
 
 ## **Architecture**
-The project follows a **cloud-based data warehousing architecture** with the following components:
 
 ```
-Raw Data → AWS S3 → ETL Processing (Talend/Alteryx) → Snowflake DW → Power BI Dashboards
+Raw Data → Data Profiling → Staging (SQL Server) → ETL (Talend) → 
+Dimensional Model → BI Dashboards (Power BI/Tableau)
 ```
 
-**Key Components:**
-- **Processing Layer**: Talend Studio and Alteryx for ETL operations
-- **Data Warehouse**: Snowflake (star schema design)
-- **Analytics Layer**: Power BI for visualization and reporting
-- **Supporting Tools**: Python (Pandas, ydata-profiling) for data profiling
+### **Dimensional Model**
+- **Fact Table**: `fact_collision`
+- **Dimensions**: `dim_date`, `dim_location`, `dim_vehicle`, `dim_contributing_factor`, `dim_person`
+- **Features**: Star schema, SCD Type 2, surrogate keys, audit columns
 
 ---
 
-## **Implementation Workflow**
+## **Implementation**
 
-### **Phase 1: Data Acquisition and Profiling**
-**Objective**: Assess data quality and understand dataset characteristics
+### **Phase 1: Data Profiling and Staging**
+- Profiled data using Python (ydata-profiling) and Alteryx
+- Identified quality issues: missing values, inconsistent formats, duplicates
+- Created staging tables with audit columns in SQL Server
 
-**Activities**:
-- Downloaded collision datasets from multiple open data sources
-- Conducted comprehensive data profiling using:
-  - **Python (ydata-profiling)** for statistical analysis
-  - **Alteryx** for visual data exploration
-- Identified data quality issues:
-  - Missing values in critical fields (location coordinates, timestamps)
-  - Inconsistent data types and formats
-  - Duplicate records and outliers
-  - Multi-valued attributes requiring normalization
+### **Phase 2: ETL Pipeline and Integration**
+- Built ETL workflows in Talend Studio
+- Standardized, cleansed, and transformed data
+- Loaded dimensional model with SCD Type 2 implementation
+- Validated data integrity with SQL queries
 
-**Deliverables**:
-- Data profiling reports with statistical summaries
-- Data quality assessment documentation
-- Schema comparison across different data sources
-
----
-
-### **Phase 2: ETL Pipeline Development**
-**Objective**: Build robust data pipelines for data extraction, transformation, and loading
-
-**Activities**:
-- Designed ETL workflows using **Talend Studio**
-- Implemented data cleansing procedures:
-  - Standardized date/time formats
-  - Handled missing values with imputation strategies
-  - Removed duplicate records
-  - Normalized multi-valued attributes
-- Created staging tables in **SQL Server** with audit columns:
-  - `LoadTimestamp`: Records when data was loaded
-  - `SourceFileName`: Tracks data lineage
-  - `ProcessStatus`: Monitors ETL execution status
-
-**Deliverables**:
-- Talend job workflows with documentation
-- Data transformation rules and business logic
-- ETL execution logs and performance metrics
-
----
-
-### **Phase 3: Data Warehousing**
-**Objective**: Design an optimized data warehouse for analytical queries
-
-**Activities**:
-- Implemented **star schema** design in Snowflake
-- Created dimension tables:
-  - `dim_date`: Temporal hierarchy (year, quarter, month, day, hour)
-  - `dim_location`: Geographic information and zone classifications
-  - `dim_weather`: Weather and environmental conditions
-  - `dim_vehicle_type`: Vehicle classification
-  - `dim_factor`: Contributing factors and causes
-- Developed fact table:
-  - `fact_collision`: Core collision metrics and foreign keys
-- Applied **Slowly Changing Dimension (SCD)** Type 2 for tracking historical changes
-- Optimized with clustering keys and materialized views
-
-**Deliverables**:
-- Entity-Relationship Diagram (ERD)
-- DDL scripts for all tables
-- Data validation queries and row count reconciliation
-
----
-
-### **Phase 4: Analytics and Visualization**
-**Objective**: Transform data into actionable insights through interactive dashboards
-
-**Activities**:
-- Connected Power BI to Snowflake data warehouse
-- Developed multiple analytical dashboards:
-  - Temporal analysis of collision trends
-  - Geographic heatmaps of high-risk zones
-  - Contributing factor breakdowns
-  - Severity and injury statistics
-- Implemented drill-down capabilities and interactive filters
-- Published dashboards for stakeholder access
-
-**Deliverables**:
-- Power BI workbooks (.pbix files)
-- Dashboard screenshots with explanations
-- User guide for dashboard navigation
-
----
-
-## **Key Insights**
-Through comprehensive analysis, CrashStat has uncovered several critical findings:
-
-- **Geographic Patterns**: Concentrated collision clusters in downtown urban corridors and major intersections
-- **Temporal Trends**: Elevated accident rates during evening rush hours (5-7 PM) and Friday evenings
-- **Seasonal Variations**: Higher collision frequency during winter months due to adverse weather
-- **Primary Factors**: Driver distraction and failure to yield are leading contributors
-- **High-Risk Demographics**: Certain vehicle types show disproportionate involvement in severe accidents
-- **Weather Impact**: Rain and fog conditions correlate with increased accident severity
+### **Phase 3: Business Intelligence**
+- Developed dashboards in Power BI and Tableau
+- Created interactive visualizations for all analytical goals
+- Implemented drill-down and filtering capabilities
 
 ---
 
 ## **Dashboards**
 
 ### **1. Accident Trends Over Time**
-![image](https://github.com/user-attachments/assets/9f011d3f-e3e0-45d5-89eb-a4dc0bc273b7)
+![Accident Trends](https://github.com/user-attachments/assets/9f011d3f-e3e0-45d5-89eb-a4dc0bc273b7)
 
-**Description**: This time-series visualization tracks collision counts across multiple temporal dimensions. Users can analyze daily, weekly, monthly, and yearly patterns to identify peak accident periods. The dashboard reveals seasonal fluctuations and long-term trends, enabling proactive resource allocation during high-risk periods.
+Time-series visualization showing collision patterns across daily, weekly, monthly, and seasonal dimensions.
 
 ---
 
 ### **2. High-Risk Areas**
-![image](https://github.com/user-attachments/assets/bf9681c3-5e81-49d8-90b3-cff7767027ad)
+![High-Risk Areas](https://github.com/user-attachments/assets/bf9681c3-5e81-49d8-90b3-cff7767027ad)
 
-**Description**: An interactive geographic heatmap highlighting collision concentration zones. This visualization uses color intensity to represent accident density, making it easy to identify dangerous intersections and road segments. The map supports zooming and filtering by accident severity, helping traffic planners prioritize safety improvements.
+Geographic heatmap identifying top accident-prone locations across the three cities with drill-down capabilities.
 
 ---
 
 ### **3. Causes of Accidents**
-![image](https://github.com/user-attachments/assets/bc404519-4e70-48df-9195-db5610c16388)
+![Causes of Accidents](https://github.com/user-attachments/assets/bc404519-4e70-48df-9195-db5610c16388)
 
-**Description**: A comprehensive breakdown analyzing primary and secondary contributing factors. This dashboard categorizes accidents by cause (e.g., speeding, distraction, weather conditions) and displays their relative frequencies. The insights guide targeted safety campaigns and enforcement strategies.
+Breakdown of primary and secondary contributing factors showing most common causes of collisions.
 
 ---
 
 ### **4. Peak Accident Times**
-![image](https://github.com/user-attachments/assets/9d8647a4-b847-4c1f-a2e1-13d53a9b909e)
+![Peak Accident Times](https://github.com/user-attachments/assets/9d8647a4-b847-4c1f-a2e1-13d53a9b909e)
 
-**Description**: This dashboard examines accident distribution by hour of day and day of week. Heat grid visualizations reveal clear patterns in collision timing, such as rush-hour spikes and weekend variations. These insights are valuable for traffic patrol scheduling and public awareness campaigns.
+Analysis of accident distribution by hour, day of week, and weekday vs. weekend patterns.
 
 ---
 
 ## **Technologies Used**
 
-| Category | Tools & Technologies |
-|----------|---------------------|
-| **Programming Languages** | Python (Pandas, Matplotlib) |
-| **Data Profiling** | ydata-profiling, Alteryx |
-| **ETL Tools** | Talend Studio, Alteryx Designer |
-| **Cloud Storage** | AWS S3 |
-| **Data Warehouse** | Snowflake, SQL Server |
-| **Visualization** | Power BI |
+| Category | Technologies |
+|----------|-------------|
+| **Data Profiling** | Python (ydata-profiling), Alteryx |
+| **ETL** | Talend Studio |
+| **Database** | SQL Server, Snowflake |
+| **Visualization** | Power BI, Tableau |
 | **Version Control** | Git, GitHub |
 
 ---
 
 ## **Future Enhancements**
-To expand the capabilities of CrashStat, the following improvements are planned:
-
-1. **Real-Time Data Integration**: Implement streaming pipelines for near real-time collision data ingestion
-2. **Predictive Analytics**: Develop machine learning models to forecast accident likelihood based on various factors
-3. **Advanced Geospatial Analysis**: Integrate road network topology data for more granular location analysis
-4. **Mobile Dashboard**: Create responsive dashboards accessible on mobile devices for field personnel
-5. **Automated Alerting**: Set up notification systems for abnormal accident patterns
-6. **Cross-City Comparison**: Expand dataset to include multiple cities for comparative analysis
-7. **Weather API Integration**: Incorporate live weather data for enhanced correlation analysis
+- Real-time data integration with streaming pipelines
+- Predictive analytics using machine learning models
+- Advanced geospatial analysis with road network data
+- Mobile dashboard access for field personnel
+- Automated alerting for abnormal accident patterns
+- Multi-city expansion for broader analysis
+- Weather API integration for real-time correlation
 
 ---
 
-## **Contact**
-For questions or collaboration opportunities, please reach out through GitHub Issues or contact me directly.
-
-**Project Repository**: [CrashStat on GitHub](https://github.com/dhirthacker7/CrashStat_Motor_Vehicle_Collision_Analysis)
+## **Project Repository**
+[CrashStat on GitHub](https://github.com/dhirthacker7/CrashStat_Motor_Vehicle_Collision_Analysis)
