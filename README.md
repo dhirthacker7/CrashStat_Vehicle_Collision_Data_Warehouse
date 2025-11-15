@@ -67,21 +67,19 @@ CrashStat analyzes motor vehicle collision data from New York, Chicago, and Aust
 
 ### **1. Overview and Temporal Analysis**
 Displays total accident counts by city (3.04M total), severity breakdown (4,964 injuries, 893K total injury count), and time-based analysis showing seasonal trends. The central visualization reveals peak accident periods throughout the year with injury vs. fatal comparisons.
-<img width="1439" height="808" alt="image" src="https://github.com/user-attachments/assets/3b330208-8d36-4600-b29d-e2d0dd056d06" />
+<img width="1200" height="672" alt="image" src="https://github.com/user-attachments/assets/326a72ea-ff81-4713-af36-9cee3a8aed84" />
 
 ---
 
 ### **2. Geographic and Pedestrian Analysis**
 Features an interactive map highlighting collision hotspots across the three cities, motor vehicle deaths and injuries by location, and pedestrian accident trends over time. Shows concentration of accidents in urban centers and tracks pedestrian involvement patterns.
-<img width="1440" height="802" alt="image" src="https://github.com/user-attachments/assets/42f7cc13-8357-4bf9-9584-7f5e6543dc66" />
-
+<img width="1197" height="672" alt="image" src="https://github.com/user-attachments/assets/7cd61c02-b8c7-4cb8-9d2a-d73ffefaae14" />
 
 ---
 
 ### **3. Contributing Factors Analysis**
 Comprehensive breakdown of the most common contributing factors leading to accidents. Lists top causes including driver inattention, failure to yield, and following too closely. Shows accident counts by data source and identifies the top 5 street names with highest accident frequency (1,695 motor vehicle deaths, 466K person vehicle injuries).
-<img width="1436" height="804" alt="image" src="https://github.com/user-attachments/assets/745efb45-bcd9-499a-b6b9-8af9af7ed292" />
-
+<img width="1197" height="670" alt="image" src="https://github.com/user-attachments/assets/3e49fa74-c8b2-4d8a-ba1c-c236bbe73b1e" />
 
 ---
 
