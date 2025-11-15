@@ -178,26 +178,23 @@ Dimensional Model → BI Dashboards (Power BI/Tableau)
 
 ---
 
-## **Dashboards**
+## **Dashboard**
 
-### **1. Accident Trends Over Time**
+### **1. Overview and Temporal Analysis**
+Displays total accident counts by city (3.04M total), severity breakdown (4,964 injuries, 893K total injury count), and time-based analysis showing seasonal trends. The central visualization reveals peak accident periods throughout the year with injury vs. fatal comparisons.
 ![Accident Trends](https://github.com/user-attachments/assets/9f011d3f-e3e0-45d5-89eb-a4dc0bc273b7)
 
-Time-series visualization showing collision patterns across daily, weekly, monthly, and seasonal dimensions.
-
 ---
 
-### **2. High-Risk Areas**
+### **2. Geographic and Pedestrian Analysis**
+Features an interactive map highlighting collision hotspots across the three cities, motor vehicle deaths and injuries by location, and pedestrian accident trends over time. Shows concentration of accidents in urban centers and tracks pedestrian involvement patterns.
 ![High-Risk Areas](https://github.com/user-attachments/assets/bf9681c3-5e81-49d8-90b3-cff7767027ad)
 
-Geographic heatmap identifying top accident-prone locations across the three cities with drill-down capabilities.
-
 ---
 
-### **3. Causes of Accidents**
+### **3. Contributing Factors Analysis**
+Comprehensive breakdown of the most common contributing factors leading to accidents. Lists top causes including driver inattention, failure to yield, and following too closely. Shows accident counts by data source and identifies the top 5 street names with highest accident frequency (1,695 motor vehicle deaths, 466K person vehicle injuries).
 ![Causes of Accidents](https://github.com/user-attachments/assets/bc404519-4e70-48df-9195-db5610c16388)
-
-Breakdown of primary and secondary contributing factors showing most common causes of collisions.
 
 ---
 
