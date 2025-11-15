@@ -182,7 +182,8 @@ Dimensional Model → BI Dashboards (Power BI/Tableau)
 
 ### **1. Overview and Temporal Analysis**
 Displays total accident counts by city (3.04M total), severity breakdown (4,964 injuries, 893K total injury count), and time-based analysis showing seasonal trends. The central visualization reveals peak accident periods throughout the year with injury vs. fatal comparisons.
-![Accident Trends](https://github.com/user-attachments/assets/9f011d3f-e3e0-45d5-89eb-a4dc0bc273b7)
+<img width="1406" height="860" alt="image" src="https://github.com/user-attachments/assets/f82a0bc1-1445-4326-a411-b06078e7e585" />
+
 
 ---
 
