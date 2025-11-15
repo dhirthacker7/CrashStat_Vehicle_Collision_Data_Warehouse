@@ -221,5 +221,5 @@ Comprehensive breakdown of the most common contributing factors leading to accid
 
 ---
 
-## **Project Repository**
+## **Author**
 [CrashStat on GitHub](https://github.com/dhirthacker7/CrashStat_Motor_Vehicle_Collision_Analysis)
