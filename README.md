@@ -221,6 +221,6 @@ Comprehensive breakdown of the most common contributing factors leading to accid
 
 ---
 
-## **Author**
-** Dhir Thacker **
+## **Author**  
+**Dhir Thacker**
 [LinkedIn](https://www.linkedin.com/in/dhirthacker7/)
