@@ -25,8 +25,7 @@ CrashStat analyzes motor vehicle collision data from New York, Chicago, and Aust
 
 ## **Data Sources**
 
-### **New York City**
-[NYC Crash Report Data | NYC Open Data](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data)
+### **New York City** [NYC Crash Report Data | NYC Open Data](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data)
 
 ### **Chicago**
 [Chicago Crash Report Data | City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data)
