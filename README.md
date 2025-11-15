@@ -6,20 +6,12 @@ CrashStat analyzes motor vehicle collision data from New York, Chicago, and Aust
 
 ## **Objectives**
 
-### **Analytical Goals**
 - Quantify accident volumes across three cities
 - Identify top high-risk areas and most fatal locations
 - Analyze injury and fatality statistics by city
 - Assess pedestrian involvement and safety
 - Examine temporal patterns (time of day, day of week, seasonality)
 - Identify common contributing factors
-
-### **Technical Goals**
-- Integrate and standardize data from three city datasets
-- Build scalable ETL pipelines using Talend
-- Design star schema dimensional model
-- Implement SCD Type 2 for historical tracking
-- Create interactive dashboards in Power BI and Tableau
 
 ---
 
