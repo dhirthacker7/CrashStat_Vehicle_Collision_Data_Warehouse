@@ -91,8 +91,8 @@ Comprehensive breakdown of the most common contributing factors leading to accid
 |----------|-------------|
 | **Data Profiling** | Python (ydata-profiling), Alteryx |
 | **ETL** | Talend Studio |
-| **Database** | SQL Server, Snowflake |
-| **Visualization** | Power BI, Tableau |
+| **Database** | SQL Server, Microsoft Excel |
+| **Visualization** | Power BI |
 | **Version Control** | Git, GitHub |
 
 ---
