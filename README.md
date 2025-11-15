@@ -198,13 +198,6 @@ Comprehensive breakdown of the most common contributing factors leading to accid
 
 ---
 
-### **4. Peak Accident Times**
-![Peak Accident Times](https://github.com/user-attachments/assets/9d8647a4-b847-4c1f-a2e1-13d53a9b909e)
-
-Analysis of accident distribution by hour, day of week, and weekday vs. weekend patterns.
-
----
-
 ## **Technologies Used**
 
 | Category | Technologies |
