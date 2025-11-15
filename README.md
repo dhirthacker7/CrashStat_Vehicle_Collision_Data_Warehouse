@@ -95,14 +95,16 @@ Comprehensive breakdown of the most common contributing factors leading to accid
 
 ---
 
-## **Future Enhancements**
-- Real-time data integration with streaming pipelines
-- Predictive analytics using machine learning models
-- Advanced geospatial analysis with road network data
-- Mobile dashboard access for field personnel
-- Automated alerting for abnormal accident patterns
-- Multi-city expansion for broader analysis
-- Weather API integration for real-time correlation
+## *Key Insights*
+Through comprehensive analysis of collision data across three major cities, CrashStat has uncovered critical findings:
+
+- *Geographic Hotspots:* Identified top accident-prone areas in New York, Chicago, and Austin, with concentrated clusters in downtown corridors and major intersections
+- *Temporal Patterns:* Peak accident periods occur during evening rush hours (5-7 PM) and Friday evenings, with distinct weekday vs. weekend patterns
+- *Seasonal Trends:* Higher collision frequency during winter months, with weather conditions significantly impacting accident rates
+- *Contributing Factors:* Most common causes include driver inattention/distraction, failure to yield right of way, following too closely, and unsafe speed
+- *Pedestrian Safety:* Analyzed pedestrian involvement rates across cities, revealing critical zones requiring enhanced safety measures
+- *Severity Analysis:* Examined injury and fatality statistics at both city-specific and aggregate levels, identifying high-risk locations requiring immediate intervention
+- *Motorist Impact:* Tracked injury and death rates among motorists, providing insights for targeted safety campaigns
 
 ---
 
