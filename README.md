@@ -65,7 +65,8 @@ Displays total accident counts by city (3.04M total), severity breakdown (4,964 
 
 ### **2. Geographic and Pedestrian Analysis**
 Features an interactive map highlighting collision hotspots across the three cities, motor vehicle deaths and injuries by location, and pedestrian accident trends over time. Shows concentration of accidents in urban centers and tracks pedestrian involvement patterns.
-<img width="1197" height="672" alt="image" src="https://github.com/user-attachments/assets/7cd61c02-b8c7-4cb8-9d2a-d73ffefaae14" />
+<img width="1403" height="792" alt="image" src="https://github.com/user-attachments/assets/32bee90f-4792-4fdd-92d5-2459d2084aa0" />
+
 
 ---
 
