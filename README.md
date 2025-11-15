@@ -1,4 +1,4 @@
-# **CrashStat: Vehicle Collision Data Warehouse**
+# **CrashStat: Motor Vehicle Collision Data Warehouse**
 
 CrashStat analyzes motor vehicle collision data from New York, Chicago, and Austin to identify accident patterns, risk factors, and safety insights. The project implements a complete data warehouse solution with ETL pipelines and interactive dashboards to answer critical questions about traffic safety.
 
