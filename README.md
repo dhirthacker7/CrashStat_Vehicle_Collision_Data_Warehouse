@@ -56,7 +56,7 @@ CrashStat analyzes motor vehicle collision data from New York, Chicago, and Aust
 ---
 
 ## **Dashboard**
-
+[Power BI](https://app.powerbi.com/groups/me/reports/dda3d0e1-ed89-47eb-a83d-4058f6991367/ReportSection?experience=power-bi)
 ### **1. Overview and Temporal Analysis**
 Displays total accident counts by city (3.04M total), severity breakdown (4,964 injuries, 893K total injury count), and time-based analysis showing seasonal trends. The central visualization reveals peak accident periods throughout the year with injury vs. fatal comparisons.
 <img width="1200" height="672" alt="image" src="https://github.com/user-attachments/assets/326a72ea-ff81-4713-af36-9cee3a8aed84" />
